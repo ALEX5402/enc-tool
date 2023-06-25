@@ -29,7 +29,12 @@
             android:id="@+id/mainstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< HEAD
             android:inputType="textAutoComplete" />
+=======
+            android:inputType="textAutoComplete"
+             />
+>>>>>>> 5adac4371f71abea7018cae49e289db842d4527e
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
