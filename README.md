@@ -21,5 +21,8 @@ val decriptedkey = alexEnc.decryptString([your string key],[your key pass])
 
 val output = alexEnc.encryptString([your strings need to be hide])
 
+val your-enckey-veriavle = output.second
+val your-encString-veriavle = output.first
+
 ```
 
