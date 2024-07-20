@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.mtvip.signkill'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.mtvip.signkill"
+        minSdk 24
+        multiDexEnabled false
+        targetSdk 33
+        versionCode 1
+        versionName "1.0" 
+
+    }
+
+    buildTypes {
+        release {
+          signingConfigs.debug
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation 'com.android.volley:volley:1.2.1'
+}
